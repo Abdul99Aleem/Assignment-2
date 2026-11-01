@@ -1,0 +1,23 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Virtual environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Execution logs (may contain operational detail; kept out of Git)
+logs/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

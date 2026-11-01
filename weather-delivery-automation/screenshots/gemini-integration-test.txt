@@ -1,0 +1,4 @@
+source=gemini
+message=Dear Alice Smith, we sincerely apologise that your order to New York is delayed due to the current moderate rain, and we thank you for your patience during this time.
+grounding: contains customer=True city=True condition=True
+fallback_check: source=template message=Hi Alice Smith, your order to New York is delayed due to moderate rain. We apologize for the inconvenience and appreciate your patience!

@@ -1,0 +1,28 @@
+2026-11-01 21:36:18 | INFO     | delivery | Run started | orders=orders.json | mode=mock
+2026-11-01 21:36:18 | WARNING  | delivery | MOCK MODE: using fixed sample weather payloads. No HTTP requests are sent.
+2026-11-01 21:36:18 | INFO     | src.order_processor | Order 1003 | London | Clear (clear sky) | status=Pending
+2026-11-01 21:36:18 | ERROR    | src.order_processor | Weather lookup failed for order 1004 (InvalidCity123): [MOCK] Weather API returned 404 for city 'InvalidCity123'
+2026-11-01 21:36:20 | INFO     | src.notification | Gemini (gemini-3.5-flash-lite) apology generated for order to New York
+2026-11-01 21:36:20 | INFO     | src.order_processor | Order 1001 | New York | Rain (moderate rain) | status=Delayed
+2026-11-01 21:36:20 | INFO     | src.order_processor | Apology (gemini) for Alice Smith: Dear Alice Smith, we sincerely apologise that your order to New York is delayed due to the current moderate rain, and we truly thank you for your patience during this time.
+2026-11-01 21:36:20 | INFO     | src.notification | Gemini (gemini-3.5-flash-lite) apology generated for order to Mumbai
+2026-11-01 21:36:20 | INFO     | src.order_processor | Order 1002 | Mumbai | Snow (light snow) | status=Delayed
+2026-11-01 21:36:20 | INFO     | src.order_processor | Apology (gemini) for Bob Jones: Dear Bob Jones, I sincerely apologize that your order to Mumbai is delayed due to light snow, and I thank you for your patience during this time.
+2026-11-01 21:36:20 | INFO     | delivery | Updated order dataset written to 'orders.mock.json' (atomic replace).
+2026-11-01 21:36:20 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:20 | INFO     | delivery | EXECUTION SUMMARY  [MOCK DATA — NOT LIVE WEATHER]
+2026-11-01 21:36:20 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:20 | INFO     | delivery | 1001           New York      -> Delayed   Rain (moderate rain)
+2026-11-01 21:36:20 | INFO     | delivery |    apology [gemini]: Dear Alice Smith, we sincerely apologise that your order to New York is delayed due to the current moderate rain, and we truly thank you for your patience during this time.
+2026-11-01 21:36:20 | INFO     | delivery | 1002           Mumbai        -> Delayed   Snow (light snow)
+2026-11-01 21:36:20 | INFO     | delivery |    apology [gemini]: Dear Bob Jones, I sincerely apologize that your order to Mumbai is delayed due to light snow, and I thank you for your patience during this time.
+2026-11-01 21:36:20 | INFO     | delivery | 1003           London        -> Pending   Clear (clear sky)
+2026-11-01 21:36:20 | INFO     | delivery | 1004           InvalidCity123 -> Pending   FAILED (CityNotFoundError): [MOCK] Weather API returned 404 for city 'InvalidCity123'
+2026-11-01 21:36:20 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:20 | INFO     | delivery | Total orders                : 4
+2026-11-01 21:36:20 | INFO     | delivery | Successfully processed      : 3
+2026-11-01 21:36:20 | INFO     | delivery | Delayed orders              : 2
+2026-11-01 21:36:20 | INFO     | delivery | Orders remaining Pending    : 2
+2026-11-01 21:36:20 | INFO     | delivery | Failed weather requests     : 1
+2026-11-01 21:36:20 | INFO     | delivery | Total execution time        : 1.431 s
+2026-11-01 21:36:20 | INFO     | delivery | ==============================================================================

@@ -24,3 +24,6 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# Packaged submission artifact (rebuilt locally, not versioned)
+*.zip

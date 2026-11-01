@@ -1,0 +1,36 @@
+[
+  {
+    "order_id": "1001",
+    "customer": "Alice Smith",
+    "city": "New York",
+    "status": "Delayed",
+    "weather_condition": "Rain",
+    "weather_description": "moderate rain",
+    "apology_message": "Dear Alice Smith, I sincerely apologize that your order to New York is delayed due to the current moderate rain, and I truly thank you for your patience during this time.",
+    "apology_source": "gemini"
+  },
+  {
+    "order_id": "1002",
+    "customer": "Bob Jones",
+    "city": "Mumbai",
+    "status": "Delayed",
+    "weather_condition": "Snow",
+    "weather_description": "light snow",
+    "apology_message": "Dear Bob Jones, I sincerely apologize that your order to Mumbai is delayed due to light snow, and I truly thank you for your patience during this time.",
+    "apology_source": "gemini"
+  },
+  {
+    "order_id": "1003",
+    "customer": "Charlie Green",
+    "city": "London",
+    "status": "Pending",
+    "weather_condition": "Clear",
+    "weather_description": "clear sky"
+  },
+  {
+    "order_id": "1004",
+    "customer": "InvalidCity123",
+    "city": "InvalidCity123",
+    "status": "Pending"
+  }
+]

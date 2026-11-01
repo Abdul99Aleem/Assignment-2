@@ -1,0 +1,22 @@
+2026-11-01 21:36:52 | INFO     | delivery | Run started | orders=orders.json | mode=live
+2026-11-01 21:36:52 | INFO     | delivery | Gemini apology generation enabled (key loaded from environment, value not logged).
+2026-11-01 21:36:53 | INFO     | src.order_processor | Order 1002 | Mumbai | Clouds (overcast clouds) | status=Pending
+2026-11-01 21:36:53 | INFO     | src.order_processor | Order 1001 | New York | Clouds (broken clouds) | status=Pending
+2026-11-01 21:36:53 | INFO     | src.order_processor | Order 1003 | London | Clouds (overcast clouds) | status=Pending
+2026-11-01 21:36:53 | ERROR    | src.order_processor | Weather lookup failed for order 1004 (InvalidCity123): Weather API returned 404 for city 'InvalidCity123'
+2026-11-01 21:36:53 | INFO     | delivery | Updated order dataset written to 'orders.json' (atomic replace).
+2026-11-01 21:36:53 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:53 | INFO     | delivery | EXECUTION SUMMARY
+2026-11-01 21:36:53 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:53 | INFO     | delivery | 1001           New York      -> Pending   Clouds (broken clouds)
+2026-11-01 21:36:53 | INFO     | delivery | 1002           Mumbai        -> Pending   Clouds (overcast clouds)
+2026-11-01 21:36:53 | INFO     | delivery | 1003           London        -> Pending   Clouds (overcast clouds)
+2026-11-01 21:36:53 | INFO     | delivery | 1004           InvalidCity123 -> Pending   FAILED (CityNotFoundError): Weather API returned 404 for city 'InvalidCity123'
+2026-11-01 21:36:53 | INFO     | delivery | ==============================================================================
+2026-11-01 21:36:53 | INFO     | delivery | Total orders                : 4
+2026-11-01 21:36:53 | INFO     | delivery | Successfully processed      : 3
+2026-11-01 21:36:53 | INFO     | delivery | Delayed orders              : 0
+2026-11-01 21:36:53 | INFO     | delivery | Orders remaining Pending    : 4
+2026-11-01 21:36:53 | INFO     | delivery | Failed weather requests     : 1
+2026-11-01 21:36:53 | INFO     | delivery | Total execution time        : 0.120 s
+2026-11-01 21:36:53 | INFO     | delivery | ==============================================================================
